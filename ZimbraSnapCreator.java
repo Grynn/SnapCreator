@@ -22,11 +22,13 @@ import java.util.Map;
 import java.util.ArrayList;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.BasicConfigurator;
 
 public class ZimbraSnapCreator {
 	static Logger logger = Logger.getLogger(ZimbraSnapCreator.class.getName());
 
 	public static void main(String[] args) {
+		BasicConfigurator.configure();
 		logger.info("Entering application");
 		logger.info(args[0]);
 		logger.info(args[1]);
@@ -74,7 +76,7 @@ public class ZimbraSnapCreator {
 		List accts;	
 		int range=0;
 		int remainder=0;
-
+System.out.println("Bulk update");
 		try {	
 			accts = prov.searchAccounts((new StringBuilder()).append("(zimbraMailHost=").append(serverName).append(")").toString(), new String[] {"zimbraId"}, null, false, 521);
 /*	
@@ -95,6 +97,7 @@ public class ZimbraSnapCreator {
 	logger.info(String.format("range: %d", range));
 } catch(ServiceException ex) {
 	logger.warn(ex.getMessage());
+	System.out.println(ex.getMessage());
 }
 	int min=0;
 	int max = range;

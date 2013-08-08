@@ -1,0 +1,4 @@
+Manifest-version: 1.0
+Class-Path: . /opt/zimbra/lib/jars/zimbrabackup.jar /opt/zimbra/lib/jars/zimbra-charset.jar /opt/zimbra/lib/jars/zimbracommon.jar /opt/zimbra/lib/jars/zimbraim.jar /opt/zimbra/lib/jars/zimbra-native.jar /opt/zimbra/lib/jars/zimbrasoap.jar /opt/zimbra/lib/jars/zimbrastore.jar /opt/zimbra/lib/jars/commons-cli-1.2.jar /opt/zimbra/lib/jars/apache-log4j-extras-1.0.jar /opt/zimbra/lib/jars/log4j-1.2.16.jar /opt/zimbra/lib/jars/dom4j-1.5.2.jar /opt/zimbra/lib/jars/guava-r09.jar 
+Main-Class: ZimbraSnapCreator
+
